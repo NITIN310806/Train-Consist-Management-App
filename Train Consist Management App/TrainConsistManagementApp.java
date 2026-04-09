@@ -6,6 +6,7 @@ public class UC3_UniqueBogieIDs {
         System.out.println("=== UC3: Track Unique Bogie IDs ===");
 
         Set<String> bogieIDs = new HashSet<>();
+        
 
         // Add bogie IDs, including duplicates
         bogieIDs.add("BG101");
