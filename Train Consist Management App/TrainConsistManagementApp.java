@@ -1,21 +1,20 @@
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
-public class UC5_InsertionOrderBogieIDs {
+public class UC6_BogieCapacityMapping {
     public static void main(String[] args) {
-        System.out.println("=== UC5: Preserve Insertion Order of Bogies ===");
+        System.out.println("=== UC6: Map Bogie to Capacity ===");
 
-        Set<String> formation = new LinkedHashSet<>();
+        Map<String, Integer> bogieCapacity = new HashMap<>();
 
-        // Attach bogies: Engine, Sleeper, Cargo, Guard
-        formation.add("Engine");
-        formation.add("Sleeper");
-        formation.add("Cargo");
-        formation.add("Guard");
+        // Insert capacity values for bogies
+        bogieCapacity.put("Sleeper", 72);
+        bogieCapacity.put("AC Chair", 60);
+        bogieCapacity.put("First Class", 40);
 
-        // Attempt to attach a duplicate bogie (Sleeper again)
-        formation.add("Sleeper"); // duplicate, ignored
-
-        System.out.println("Final formation: " + formation);
+        // Iterate over the map using entrySet() and display
+        for (Map.Entry<String, Integer> entry : bogieCapacity.entrySet()) {
+            System.out.println("Bogie: " + entry.getKey() + ", Capacity: " + entry.getValue());
+        }
     }
 }
