@@ -13,6 +13,20 @@ public class UC3_UniqueBogieIDs {
         bogieIDs.add("BG101"); // duplicate
         bogieIDs.add("BG103");
 
-        System.out.println("Unique Bogie IDs: " + bogieIDs);
+        // Add passenger bogies
+        bogies.add("Sleeper");
+        bogies.add("AC Chair");
+        bogies.add("First Class");
+        
+
+        System.out.println("Bogies after addition: " + bogies);
+
+        // Remove a bogie
+        bogies.remove("AC Chair");
+
+        // Check if Sleeper exists
+        System.out.println("Does Sleeper exist? " + bogies.contains("Sleeper"));
+
+        System.out.println("Final bogies: " + bogies);
     }
 }
