@@ -1,7 +1,8 @@
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class UC5_InsertionOrderBogieIDs {
+
+public class UC4_OrderedBogieIDs {
     public static void main(String[] args) {
         System.out.println("=== UC5: Preserve Insertion Order of Bogies ===");
 
