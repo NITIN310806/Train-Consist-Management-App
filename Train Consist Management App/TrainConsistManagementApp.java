@@ -5,6 +5,7 @@ public class UC5_InsertionOrderBogieIDs {
     public static void main(String[] args) {
         System.out.println("=== UC5: Preserve Insertion Order of Bogies ===");
 
+        
         Set<String> formation = new LinkedHashSet<>();
 
         // Attach bogies: Engine, Sleeper, Cargo, Guard
