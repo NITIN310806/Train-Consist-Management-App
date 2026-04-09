@@ -13,6 +13,7 @@ public class TrainConsistManagementApp {
         bogies.add("Sleeper");
         bogies.add("AC Chair");
         bogies.add("First Class");
+        
 
         System.out.println("Bogies after addition: " + bogies);
 
