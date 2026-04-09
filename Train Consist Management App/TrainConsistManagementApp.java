@@ -1,13 +1,23 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 
 public class TrainConsistManagementApp {
+public class UC5_InsertionOrderBogieIDs {
     public static void main(String[] args) {
-        System.out.println("=== Train Consist Management App ===");
+        System.out.println("=== UC5: Preserve Insertion Order of Bogies ===");
 
-        List<String> bogies = new ArrayList<>();
+        Set<String> formation = new LinkedHashSet<>();
 
-        System.out.println("Initial bogie count: " + bogies.size());
+        // Attach bogies: Engine, Sleeper, Cargo, Guard
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
+
+        // Attempt to attach a duplicate bogie (Sleeper again)
+        formation.add("Sleeper"); // duplicate, ignored
+
+        System.out.println("Final formation: " + formation);
     }
 }
