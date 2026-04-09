@@ -1,29 +1,21 @@
-import java.util.LinkedList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
-public class UC4_OrderedBogieIDs {
+public class UC5_InsertionOrderBogieIDs {
     public static void main(String[] args) {
-        System.out.println("=== UC4: Maintain Ordered Bogie IDs ===");
+        System.out.println("=== UC5: Preserve Insertion Order of Bogies ===");
 
-        LinkedList<String> consist = new LinkedList<>();
+        Set<String> formation = new LinkedHashSet<>();
 
-        // Add bogies: Engine, Sleeper, AC, Cargo, Guard
-        consist.add("Engine");
-        consist.add("Sleeper");
-        consist.add("AC");
-        consist.add("Cargo");
-        consist.add("Guard");
+        // Attach bogies: Engine, Sleeper, Cargo, Guard
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
 
-        System.out.println("Initial consist: " + consist);
+        // Attempt to attach a duplicate bogie (Sleeper again)
+        formation.add("Sleeper"); // duplicate, ignored
 
-        // Insert Pantry Car at position 2
-        consist.add(2, "Pantry Car");
-
-        System.out.println("After inserting Pantry Car: " + consist);
-
-        // Remove the first and last bogie
-        consist.removeFirst();
-        consist.removeLast();
-
-        System.out.println("Final consist: " + consist);
+        System.out.println("Final formation: " + formation);
     }
 }
