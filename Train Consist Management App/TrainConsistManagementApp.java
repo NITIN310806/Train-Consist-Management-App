@@ -1,18 +1,20 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
-public class UC3_UniqueBogieIDs {
+public class UC6_BogieCapacityMapping {
     public static void main(String[] args) {
-        System.out.println("=== UC3: Track Unique Bogie IDs ===");
+        System.out.println("=== UC6: Map Bogie to Capacity ===");
 
-        Set<String> bogieIDs = new HashSet<>();
+        Map<String, Integer> bogieCapacity = new HashMap<>();
 
-        // Add bogie IDs, including duplicates
-        bogieIDs.add("BG101");
-        bogieIDs.add("BG102");
-        bogieIDs.add("BG101"); // duplicate
-        bogieIDs.add("BG103");
+        // Insert capacity values for bogies
+        bogieCapacity.put("Sleeper", 72);
+        bogieCapacity.put("AC Chair", 60);
+        bogieCapacity.put("First Class", 40);
 
-        System.out.println("Unique Bogie IDs: " + bogieIDs);
+        // Iterate over the map using entrySet() and display
+        for (Map.Entry<String, Integer> entry : bogieCapacity.entrySet()) {
+            System.out.println("Bogie: " + entry.getKey() + ", Capacity: " + entry.getValue());
+        }
     }
 }
