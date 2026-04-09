@@ -1,33 +1,22 @@
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class UC3_UniqueBogieIDs {
+public class UC5_InsertionOrderBogieIDs {
     public static void main(String[] args) {
-        System.out.println("=== UC3: Track Unique Bogie IDs ===");
+        System.out.println("=== UC5: Preserve Insertion Order of Bogies ===");
 
-        Set<String> bogieIDs = new HashSet<>();
         
+        Set<String> formation = new LinkedHashSet<>();
 
-        // Add bogie IDs, including duplicates
-        bogieIDs.add("BG101");
-        bogieIDs.add("BG102");
-        bogieIDs.add("BG101"); // duplicate
-        bogieIDs.add("BG103");
+        // Attach bogies: Engine, Sleeper, Cargo, Guard
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
 
-        // Add passenger bogies
-        bogies.add("Sleeper");
-        bogies.add("AC Chair");
-        bogies.add("First Class");
-        
+        // Attempt to attach a duplicate bogie (Sleeper again)
+        formation.add("Sleeper"); // duplicate, ignored
 
-        System.out.println("Bogies after addition: " + bogies);
-
-        // Remove a bogie
-        bogies.remove("AC Chair");
-
-        // Check if Sleeper exists
-        System.out.println("Does Sleeper exist? " + bogies.contains("Sleeper"));
-
-        System.out.println("Final bogies: " + bogies);
+        System.out.println("Final formation: " + formation);
     }
 }
