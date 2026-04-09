@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 
+
 public class UC4_OrderedBogieIDs {
     public static void main(String[] args) {
         System.out.println("=== UC4: Maintain Ordered Bogie IDs ===");
