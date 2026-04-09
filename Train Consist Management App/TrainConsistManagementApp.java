@@ -8,5 +8,20 @@ public class TrainConsistManagementApp {
         List<String> bogies = new ArrayList<>();
 
         System.out.println("Initial bogie count: " + bogies.size());
+
+        // Add passenger bogies
+        bogies.add("Sleeper");
+        bogies.add("AC Chair");
+        bogies.add("First Class");
+
+        System.out.println("Bogies after addition: " + bogies);
+
+        // Remove a bogie
+        bogies.remove("AC Chair");
+
+        // Check if Sleeper exists
+        System.out.println("Does Sleeper exist? " + bogies.contains("Sleeper"));
+
+        System.out.println("Final bogies: " + bogies);
     }
 }
